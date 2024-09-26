@@ -10,11 +10,13 @@ struct Student {
 };
 
 // function to print student's information
-int printStudent(Student *a) {
-    std::cout<<"Student Name = "<<a->name<<std::endl;
-    std::cout<<"Student Email = "<<a->email<<std::endl;
-    std::cout<<"Student Username = "<<a->username<<std::endl;
-    std::cout<<"Student Experiment = "<<a->experiment<<std::endl;
+int printStudent(const Student &a) {
+
+    // try to change value
+    std::cout<<"Student Name = "<<a.name<<std::endl;
+    std::cout<<"Student Email = "<<a.email<<std::endl;
+    std::cout<<"Student Username = "<<a.username<<std::endl;
+    std::cout<<"Student Experiment = "<<a.experiment<<std::endl;
 
     return 0;
 }
@@ -37,9 +39,9 @@ int main() {
     ashling.experiment = "CMS";
 
     // print out information for both students
-    printStudent(&elliott);
+    printStudent(elliott);
     std::cout<<std::endl;
-    printStudent(&ashling);
+    printStudent(ashling);
 
     return 0;
 }
