@@ -1,0 +1,1 @@
+Each exercise is precompiled. To run the programs for exercises 1-3, use the command './exercise*'. Exercise 4 is located in the directory Exercise4 and can be run within that directory using the command ./main
